@@ -1,0 +1,67 @@
+{
+  "ResturantList": [
+    {
+      "restaurantID": 26,
+      "restaurantName": "1135 AD",
+      "address": "Jaipur, Amber Fort, Rajasthan",
+      "type": "Rajasthani",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 25,
+      "restaurantName": "6 Ballygunge Place",
+      "address": "Kolkata, Ballygunge, West Bengal",
+      "type": "Bengali Cuisine",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 29,
+      "restaurantName": "Agashiye",
+      "address": "Ahmedabad, House of MG, Gujarat",
+      "type": "Gujarati",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 9,
+      "restaurantName": "Alhamdulillah Hotel",
+      "address": "Hyderabad, Sultan Shahi, Telangana",
+      "type": "Mughlai",
+      "parkingLot": false
+    },
+    {
+      "restaurantID": 4,
+      "restaurantName": "Bawarchi",
+      "address": "Hyderabad, RTC Cross Road, Telangana",
+      "type": "Biryani",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 22,
+      "restaurantName": "Benjarong",
+      "address": "Chennai, Alwarpet, Tamil Nadu",
+      "type": "Thai",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 16,
+      "restaurantName": "Britannia & Co.",
+      "address": "Mumbai, Ballard, Maharashtra",
+      "type": "Parsi Cuisine",
+      "parkingLot": false
+    },
+    {
+      "restaurantID": 11,
+      "restaurantName": "Bukhara",
+      "address": "Delhi, Chanakyapuri, Delhi",
+      "type": "North Indian",
+      "parkingLot": true
+    },
+    {
+      "restaurantID": 20,
+      "restaurantName": "Dakshin",
+      "address": "Chennai, ITC Grand Chola, Tamil Nadu",
+      "type": "South Indian",
+      "parkingLot": true
+    }
+  ]
+}

@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnackPoint</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+
+    <link rel="stylesheet" href="CSS/dashboard-style.css" />
+  </head>
+  <body>
+    <header>
+      <div class="applogo-div">
+        <img src="assets/logo.png" alt="app logo image" class="app-image" />
+        <h2>Snacks Point</h2>
+      </div>
+      <div class="logged-in-user-div">
+        <p>User</p>
+        <img src="assets/icons8-power-48.png" alt="sign off icon" />
+      </div>
+    </header>
+    <div class="container">
+      <aside class="left-sidebar">
+        <!-- Content for the left sidebar -->
+        <nav>
+          <a href="about.html">About</a>
+          <a href="services.html">Services</a>
+          <a href="orders.html">Your Orders</a>
+          <a href="wishlist.html">Wishlists</a>
+          <a href="#CartItems" onclick="myCartItems()">Cart</a>
+          <a href="contact.html">Contact</a>
+          <a href="address.html">Address</a>
+        </nav>
+      </aside>
+      <main class="main-content hidden">
+        <!-- Main content goes here -->
+        <div class="search-div">
+          <input
+            type="text"
+            class="search-text"
+            placeholder="Search by Resturant"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+        <div class="Resturant-list">
+          <div class="Resturant-info">
+            <div class="Resturant-details">
+              <h3 class="child">Name of Resturant</h3>
+              <p class="child">Type of Resturant</p>
+              <p class="child">Resturant Address</p>
+              <p class="child"></p>
+            </div>
+            <div class="Resturant-image">
+              <img
+                src="assets/snak-img1.jpg"
+                alt="Resturant image"
+                class="Resturant-img"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <main class="menu-content hidden">
+        <!-- Main content goes here -->
+        <div class="search-div">
+          <input
+            type="text"
+            class="search-text"
+            placeholder="Search by items"
+          />
+          <button class="search-btn">Search</button>
+        </div>
+        <div class="Resturant-item-list">
+          <div class="Resturant-item-info">
+            <div class="Resturant-item-details">
+              <h3 class="child">Name of Item</h3>
+              <p class="child">Type of item</p>
+              <p class="child"></p>
+            </div>
+            <div class="Resturant-item-image">
+              <img
+                src="assets/snak-img1.jpg"
+                alt="Item image"
+                class="Resturant-item-img"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+
+      <main class="cart-content hidden" id="CartItems">
+        <!-- Main content goes here -->
+        <div class="cart-item-list">
+          <div class="cart-item-info">
+            <div class="cart-item-details">
+              <h3 class="child">Name of Item</h3>
+              <p class="child">Type of item</p>
+              <p class="child"></p>
+            </div>
+            <div class="cart-item-image">
+              <img
+                src="assets/snak-img1.jpg"
+                alt="Item image"
+                class="cart-item-img"
+              />
+            </div>
+          </div>
+        </div>
+      </main>
+      <!-- <aside class="right-sidebar">
+        
+        <h2>Right Sidebar</h2>
+        <p>Ads, related links, etc.</p>
+      </aside> -->
+    </div>
+
+    <footer></footer>
+    <script src="JS/dashboard-script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SnackPoint</title>
+    <link rel="icon" type="image/png" href="/assets/logo.png" />
+    <link rel="stylesheet" href="CSS/login-style.css" />
+  </head>
+  <body>
+    <section class="login-section">
+      <div class="login-form">
+        <div>
+          <h3>Login</h3>
+        </div>
+        <div>
+          <h4>Welcome Back</h4>
+          <p class="paragraph">
+            Enter your email address and password to access dashboard
+          </p>
+        </div>
+        <div class="form-div">
+          <label for="email">Email address</label>
+          <input type="text" class="emailid" id="email" />
+          <br />
+          <label for="password">Password</label>
+          <input type="password" class="password" id="password" />
+          <br />
+          <div class="form-btn">
+            <button class="btn" onclick="FormSubmitFun()">Login</button>
+            <button class="btn" onclick="FormResetFun()">Reset</button>
+          </div>
+        </div>
+      </div>
+      <div class="login-img">
+        <img src="assets/logo.png" alt="logo image" />
+        <img src="assets/snak-img2.jpg" alt="snak image" />
+      </div>
+    </section>
+
+    <div class="model hidden">
+      <span class="close-btn" onclick="closeAlert()">&times;</span>
+      <p class="alert-content"></p>
+    </div>
+    <div class="overlay hidden"></div>
+
+    <script src="JS/login-script.js"></script>
+  </body>
+</html>
