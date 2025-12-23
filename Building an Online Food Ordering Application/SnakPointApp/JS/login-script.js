@@ -12,12 +12,14 @@ function FormResetFun() {
 function FormSubmitFun() {
   let emailId = document.getElementById("email").value;
   let Password = document.getElementById("password").value;
-
+  let username = emailId.split("@");
   if (emailId.trim() != "" && Password.trim() != "") {
     if (emailId.trim() == "admin@gmail.com" && Password.trim() == "Admin@123") {
       //alert("Logged-In Successfully");
       AlertContent.textContent = "Logged-In Successfully";
       DisplayAlert();
+      const user = { name: username[0], email: emailId };
+      localStorage.setItem("user", JSON.stringify(user));
       window.location.href = "./dashboard.html";
       return true;
     } else {

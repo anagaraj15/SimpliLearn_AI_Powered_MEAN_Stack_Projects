@@ -15,21 +15,31 @@
         <h2>Snacks Point</h2>
       </div>
       <div class="logged-in-user-div">
-        <p>User</p>
-        <img src="assets/icons8-power-48.png" alt="sign off icon" />
+        <p class="logged-in-username">User</p>
+        <img
+          src="assets/icons8-power-48.png"
+          class="signOffImg"
+          alt="sign off icon"
+          onclick="LogoutPage()"
+        />
       </div>
     </header>
     <div class="container">
       <aside class="left-sidebar">
         <!-- Content for the left sidebar -->
         <nav>
-          <a href="about.html">About</a>
-          <a href="services.html">Services</a>
-          <a href="orders.html">Your Orders</a>
-          <a href="wishlist.html">Wishlists</a>
-          <a href="#CartItems" onclick="myCartItems()">Cart</a>
-          <a href="contact.html">Contact</a>
-          <a href="address.html">Address</a>
+          <a href="dashboard.html" class="home-link">Home</a>
+          <a href="about.html" class="about-link">About</a>
+          <a href="#makePayment" class="payment-link">Payment</a>
+          <a href="#Orders" onclick="goTomyOrders()" class="orders-link"
+            >Your Orders</a
+          >
+          <!-- <a href="wishlist.html">Wishlists</a> -->
+          <a href="#CartItems" onclick="myCartItems()" class="cart-link"
+            >Cart</a
+          >
+          <a href="contacts.html" class="contacts-link">Contacts</a>
+          <a href="address.html" class="address-link">Address</a>
         </nav>
       </aside>
       <main class="main-content hidden">
@@ -106,6 +116,162 @@
               />
             </div>
           </div>
+          <div class="cart-item-bill" id="table">
+            <div class="tr">
+              <p class="th">Item Name</p>
+              <p class="th">Item Price</p>
+            </div>
+            <div class="tr">
+              <p class="td">Pizza</p>
+              <p class="td">100</p>
+            </div>
+            <!-- <hr /> -->
+            <div class="tr total">
+              <p class="th">total</p>
+              <p class="th">100</p>
+            </div>
+          </div>
+          <div class="cart-item-order">
+            <button class="order-btn">Place Order</button>
+            <button class="cancel-btn">Cancel</button>
+          </div>
+        </div>
+      </main>
+      <main class="payment-content hidden" id="makePayment">
+        <p class="payment-value">&#8377;100</p>
+        <!-- Main content goes here -->
+        <div class="payment-method-list">
+          <details class="accordion1">
+            <summary>Credit Card</summary>
+            <div class="Credit-card-details">
+              <div class="div-row">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="name"
+                  class="inputtxt"
+                  placeholder="Name on the Card"
+                />
+              </div>
+              <div class="div-row">
+                <label for="card-number">Card Number</label>
+                <input
+                  type="text"
+                  name="card-number"
+                  id="card-number"
+                  class="inputtxt"
+                  placeholder="1111-2222-3333-4444"
+                />
+              </div>
+              <div class="input-split">
+                <div class="splitted-div-row">
+                  <label for="expiration">Expiry(mm/yy)</label>
+                  <input
+                    type="text"
+                    name="expiration"
+                    id="expiration"
+                    class="inputtxt"
+                    placeholder="mm/yy"
+                  />
+                </div>
+                <div class="splitted-div-row">
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="password"
+                    name="cvv"
+                    id="cvv"
+                    class="inputtxt"
+                    placeholder="CVV"
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  class="payment-btn"
+                  onclick="MakePaymentforFood('credit')"
+                >
+                  Make Payment
+                </button>
+              </div>
+            </div>
+          </details>
+
+          <details class="accordion2">
+            <summary>Debit Card</summary>
+            <div class="Debit-card-details">
+              <div class="div-row">
+                <label for="name">Name</label>
+                <input
+                  type="text"
+                  name="name"
+                  id="deb-name"
+                  class="inputtxt"
+                  placeholder="Name on the Card"
+                />
+              </div>
+              <div class="div-row">
+                <label for="card-number">Card Number</label>
+                <input
+                  type="text"
+                  name="card-number"
+                  id="deb-card-number"
+                  class="inputtxt"
+                  placeholder="1111-2222-3333-4444"
+                />
+              </div>
+              <div class="input-split">
+                <div class="splitted-div-row">
+                  <label for="expiration">Expiry(mm/yy)</label>
+                  <input
+                    type="text"
+                    name="expiration"
+                    id="deb-expiration"
+                    class="inputtxt"
+                    placeholder="mm/yy"
+                  />
+                </div>
+                <div class="splitted-div-row">
+                  <label for="cvv">CVV</label>
+                  <input
+                    type="password"
+                    name="cvv"
+                    id="deb-cvv"
+                    class="inputtxt"
+                    placeholder="CVV"
+                  />
+                </div>
+              </div>
+              <div>
+                <button
+                  class="payment-btn"
+                  onclick="MakePaymentforFood('debit')"
+                >
+                  Make Payment
+                </button>
+              </div>
+            </div>
+          </details>
+        </div>
+      </main>
+
+      <main class="orders-content hidden" id="Orders">
+        <!-- Main content goes here -->
+        <div class="orders-item-list">
+          <div class="orders-item-info">
+            <div class="orders-item-details">
+              <h3 class="child">Name of Item</h3>
+              <p class="child">Type of item</p>
+              <p class="child"></p>
+            </div>
+            <div class="orders-item-image">
+              <img
+                src="assets/snak-img1.jpg"
+                alt="Item image"
+                class="orders-item-img"
+              />
+            </div>
+          </div>
         </div>
       </main>
       <!-- <aside class="right-sidebar">
@@ -116,6 +282,12 @@
     </div>
 
     <footer></footer>
+
+    <div class="model hidden">
+      <span class="close-btn" onclick="closeAlert()">&times;</span>
+      <p class="alert-content"></p>
+    </div>
+    <div class="overlay hidden"></div>
     <script src="JS/dashboard-script.js"></script>
   </body>
 </html>
